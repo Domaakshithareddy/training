@@ -2,7 +2,7 @@ from repository import ProductRepository
 from schemas import ProductCreate, ProductUpdate, ProductPatch
 from exceptions import ProductNotFoundException
 
-class EmployeeService:
+class ProductService:
 
     @staticmethod
     def get_all_products():

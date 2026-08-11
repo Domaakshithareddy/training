@@ -3,14 +3,12 @@ from fastapi.responses import JSONResponse
 
 class ApiResponse:
 
-
     @staticmethod
     def success(
         message: str,
         data=None,
         status_code=status.HTTP_200_OK
     ):
-
 
         return JSONResponse(
             status_code=status_code,
@@ -21,13 +19,11 @@ class ApiResponse:
             }
         )
 
-
     @staticmethod
     def created(
         message: str,
         data=None
     ):
-
 
         return JSONResponse(
             status_code=status.HTTP_201_CREATED,
@@ -38,22 +34,18 @@ class ApiResponse:
             }
         )
 
-
     @staticmethod
     def no_content():
-
 
         return JSONResponse(
             status_code=status.HTTP_204_NO_CONTENT,
             content=None
         )
 
-
     @staticmethod
     def bad_request(
         message: str
     ):
-
 
         return JSONResponse(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -64,12 +56,10 @@ class ApiResponse:
             }
         )
 
-
     @staticmethod
     def not_found(
         message: str
     ):
-
 
         return JSONResponse(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -80,12 +70,10 @@ class ApiResponse:
             }
         )
 
-
     @staticmethod
     def conflict(
         message: str
     ):
-
 
         return JSONResponse(
             status_code=status.HTTP_409_CONFLICT,
@@ -99,7 +87,6 @@ class ApiResponse:
 
     @staticmethod
     def internal_server_error():
-
 
         return JSONResponse(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
